@@ -1,0 +1,8 @@
+[
+  { "electionDate": "2024-12-07", "partyCode": "NDC", "voteSharePct": 56.6, "seatsWon": 183, "turnoutPct": 60.9 },
+  { "electionDate": "2024-12-07", "partyCode": "NPP", "voteSharePct": 41.6, "seatsWon": 88, "turnoutPct": 60.9 },
+  { "electionDate": "2020-12-07", "partyCode": "NPP", "voteSharePct": 51.6, "seatsWon": 137, "turnoutPct": 79.2 },
+  { "electionDate": "2020-12-07", "partyCode": "NDC", "voteSharePct": 47.4, "seatsWon": 137, "turnoutPct": 79.2 },
+  { "electionDate": "2016-12-07", "partyCode": "NPP", "voteSharePct": 53.9, "seatsWon": 169, "turnoutPct": 68.6 },
+  { "electionDate": "2016-12-07", "partyCode": "NDC", "voteSharePct": 44.4, "seatsWon": 106, "turnoutPct": 68.6 }
+]

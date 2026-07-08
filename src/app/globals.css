@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+}
+
+/* Visible focus rings everywhere — WCAG 2.1 AA 2.4.7 (Focus Visible).
+   Do not remove outline without replacing it; keyboard-only users
+   (a named target user group: analysts/journalists on locked-down
+   institutional machines) rely on this. */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Skip-to-content link, visually hidden until focused */
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50
+    focus:rounded-md focus:bg-surface-dark focus:px-4 focus:py-2 focus:text-ink-inverted;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

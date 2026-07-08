@@ -1,0 +1,34 @@
+[
+  {
+    "runDate": "2026-07-08",
+    "modelVersion": "v0.4.1",
+    "partyCode": "NDC",
+    "pointEstimatePct": 51.2,
+    "ciLowerPct": 46.8,
+    "ciUpperPct": 55.6,
+    "ciLevel": 0.95,
+    "pollBlendInput": 50.4,
+    "sentimentDeltaInput": 0.32,
+    "betaUsed": 2.5,
+    "nPollsUsed": 7,
+    "nMentionsUsed": 84200,
+    "wasPublished": true,
+    "anomalyFlagged": false
+  },
+  {
+    "runDate": "2026-07-08",
+    "modelVersion": "v0.4.1",
+    "partyCode": "NPP",
+    "pointEstimatePct": 44.1,
+    "ciLowerPct": 39.7,
+    "ciUpperPct": 48.5,
+    "ciLevel": 0.95,
+    "pollBlendInput": 44.8,
+    "sentimentDeltaInput": -0.18,
+    "betaUsed": 2.5,
+    "nPollsUsed": 7,
+    "nMentionsUsed": 61400,
+    "wasPublished": true,
+    "anomalyFlagged": false
+  }
+]

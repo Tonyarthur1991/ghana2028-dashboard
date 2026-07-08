@@ -1,0 +1,842 @@
+[
+  {
+    "day": "2026-06-09",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.12,
+    "mentionVolume": 650,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-09",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.02,
+    "mentionVolume": 550,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-10",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.126,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-10",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.024,
+    "mentionVolume": 585,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-11",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.132,
+    "mentionVolume": 730,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-11",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.029,
+    "mentionVolume": 620,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-12",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.139,
+    "mentionVolume": 770,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-12",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.033,
+    "mentionVolume": 655,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-13",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.145,
+    "mentionVolume": 810,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-13",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.038,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-14",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.151,
+    "mentionVolume": 850,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-14",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.042,
+    "mentionVolume": 725,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-15",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.157,
+    "mentionVolume": 890,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-15",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.047,
+    "mentionVolume": 760,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-16",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.163,
+    "mentionVolume": 650,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-16",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.051,
+    "mentionVolume": 550,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-17",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.17,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-17",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.056,
+    "mentionVolume": 585,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-18",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.176,
+    "mentionVolume": 730,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-18",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.06,
+    "mentionVolume": 620,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-19",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.182,
+    "mentionVolume": 770,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-19",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.065,
+    "mentionVolume": 655,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-20",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.188,
+    "mentionVolume": 810,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-20",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.069,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-21",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.194,
+    "mentionVolume": 850,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-21",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.074,
+    "mentionVolume": 725,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-22",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.201,
+    "mentionVolume": 890,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-22",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.078,
+    "mentionVolume": 760,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-23",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.207,
+    "mentionVolume": 650,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-23",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.083,
+    "mentionVolume": 550,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-24",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.213,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-24",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.087,
+    "mentionVolume": 585,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-25",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.219,
+    "mentionVolume": 730,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-25",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.092,
+    "mentionVolume": 620,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-26",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.226,
+    "mentionVolume": 770,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-26",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.096,
+    "mentionVolume": 655,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-27",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.232,
+    "mentionVolume": 810,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-27",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.101,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-28",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.238,
+    "mentionVolume": 850,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-28",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.105,
+    "mentionVolume": 725,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-29",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.244,
+    "mentionVolume": 890,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-29",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.11,
+    "mentionVolume": 760,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-30",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.25,
+    "mentionVolume": 650,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-06-30",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.114,
+    "mentionVolume": 550,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-01",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.257,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-01",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.119,
+    "mentionVolume": 585,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-02",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.263,
+    "mentionVolume": 730,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-02",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.123,
+    "mentionVolume": 620,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-03",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.269,
+    "mentionVolume": 770,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-03",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.128,
+    "mentionVolume": 655,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-04",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.275,
+    "mentionVolume": 810,
+    "shareOfVoice": 0.48,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-04",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.132,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.36,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-05",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.281,
+    "mentionVolume": 850,
+    "shareOfVoice": 0.49,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-05",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.137,
+    "mentionVolume": 725,
+    "shareOfVoice": 0.37,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-06",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.288,
+    "mentionVolume": 890,
+    "shareOfVoice": 0.5,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-06",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.141,
+    "mentionVolume": 760,
+    "shareOfVoice": 0.38,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-07",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.294,
+    "mentionVolume": 650,
+    "shareOfVoice": 0.51,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-07",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.146,
+    "mentionVolume": 550,
+    "shareOfVoice": 0.39,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-08",
+    "entityType": "party",
+    "entityCode": "NDC",
+    "weightedMeanSentiment": 0.3,
+    "mentionVolume": 690,
+    "shareOfVoice": 0.52,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  },
+  {
+    "day": "2026-07-08",
+    "entityType": "party",
+    "entityCode": "NPP",
+    "weightedMeanSentiment": -0.15,
+    "mentionVolume": 585,
+    "shareOfVoice": 0.4,
+    "region": null,
+    "sourcePlatformMix": {
+      "x": 0.55,
+      "facebook": 0.28,
+      "news": 0.17
+    }
+  }
+]

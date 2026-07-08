@@ -1,0 +1,10 @@
+[
+  { "issueCode": "economy", "label": "Economy / Cost of Living", "mentionVolume": 24100, "netSentiment": -0.38, "trendVsPriorPeriod": "up" },
+  { "issueCode": "corruption", "label": "Corruption & Accountability", "mentionVolume": 18700, "netSentiment": -0.55, "trendVsPriorPeriod": "up" },
+  { "issueCode": "education", "label": "Education", "mentionVolume": 14200, "netSentiment": 0.18, "trendVsPriorPeriod": "flat" },
+  { "issueCode": "health", "label": "Healthcare", "mentionVolume": 12600, "netSentiment": 0.09, "trendVsPriorPeriod": "down" },
+  { "issueCode": "unemployment", "label": "Youth Unemployment", "mentionVolume": 11400, "netSentiment": -0.42, "trendVsPriorPeriod": "up" },
+  { "issueCode": "infrastructure", "label": "Infrastructure & Roads", "mentionVolume": 8900, "netSentiment": -0.21, "trendVsPriorPeriod": "flat" },
+  { "issueCode": "energy", "label": "Energy / Dumsor", "mentionVolume": 7800, "netSentiment": -0.49, "trendVsPriorPeriod": "down" },
+  { "issueCode": "agriculture", "label": "Agriculture", "mentionVolume": 5400, "netSentiment": 0.12, "trendVsPriorPeriod": "flat" }
+]
