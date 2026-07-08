@@ -19,6 +19,7 @@ import os
 from datetime import date
 
 from transfer_function import (
+    IssueSentimentObservation,
     PollObservation,
     SentimentObservation,
     forecast,
@@ -31,6 +32,13 @@ ACTUAL_RESULT = {
     "NDC": 56.65,
     "NPP": 41.61,
 }
+
+# NPP was the incumbent through the Dec 2024 election — NDC only took office
+# after winning it. This is the historically correct incumbent for THIS
+# backtest and deliberately does not come from settings.yaml, whose
+# incumbent_party_code reflects the current (2026, post-handover) config.
+INCUMBENT_2024 = "NPP"
+ACCOUNTABLE_ISSUES_2024 = ["economy", "corruption"]
 
 # Tolerance for the point estimate — deliberately wide, this is a mechanism
 # test on synthetic sentiment input, not a precision claim.
@@ -71,6 +79,69 @@ def load_sentiment() -> list[SentimentObservation]:
                 )
             )
     return series
+
+
+def load_issue_sentiment() -> list[IssueSentimentObservation]:
+    series = []
+    path = os.path.join(DATA_DIR, "2024_issue_sentiment_synthetic.csv")
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in f:
+            if row.startswith("#") or not row.strip():
+                continue
+            if row.startswith("day,"):
+                continue
+            day_str, issue_code, sentiment, volume = row.strip().split(",")
+            series.append(
+                IssueSentimentObservation(
+                    day=date.fromisoformat(day_str),
+                    issue_code=issue_code,
+                    net_sentiment=float(sentiment),
+                    mention_volume=int(volume),
+                )
+            )
+    return series
+
+
+def run_issue_gamma_sweep() -> None:
+    """Exploratory, NOT a pass/fail gate: shows how different issue_gamma
+    values move the 2024 reconstruction, so a human can eyeball whether the
+    incumbency-accountability direction is even plausible before ever fitting
+    gamma properly. All synthetic data — see module docstring caveats."""
+    polls = load_polls()
+    sentiment = load_sentiment()
+    issues = load_issue_sentiment()
+    as_of = date(2024, 12, 5)
+    beta = 0.35
+
+    print("\nIssue-accountability gamma sweep (exploratory, synthetic issue data):")
+    print(f"{'gamma':>6}{'NDC fcst':>10}{'NDC err':>10}{'NPP fcst':>10}{'NPP err':>10}")
+    print("-" * 46)
+    for gamma in (0.0, 0.5, 1.0, 1.5, 2.0):
+        row = {}
+        for party_code in ("NDC", "NPP"):
+            result = forecast(
+                party_code=party_code,
+                as_of=as_of,
+                polls=polls,
+                sentiment_series=sentiment,
+                beta=beta,
+                issue_series=issues,
+                incumbent_party_code=INCUMBENT_2024,
+                accountable_issue_codes=ACCOUNTABLE_ISSUES_2024,
+                issue_gamma=gamma,
+            )
+            row[party_code] = (result.point_estimate_pct, abs(result.point_estimate_pct - ACTUAL_RESULT[party_code]))
+        print(
+            f"{gamma:>6.1f}{row['NDC'][0]:>10.2f}{row['NDC'][1]:>10.2f}"
+            f"{row['NPP'][0]:>10.2f}{row['NPP'][1]:>10.2f}"
+        )
+    print(
+        "\nIf error shrinks as gamma rises from 0, the incumbency-accountability "
+        "direction is at least plausible on this (synthetic) fixture — that is "
+        "NOT the same as a fitted, validated gamma. Do not copy a 'best' value "
+        "from this sweep straight into settings.yaml; this exists to sanity-"
+        "check the mechanism, not to calibrate it."
+    )
 
 
 def run_backtest() -> bool:
@@ -114,11 +185,10 @@ def run_backtest() -> bool:
         "real-world forecasting accuracy. Do not cite this as calibration "
         "evidence in any public methodology page until real archived "
         "sentiment data replaces data/backtest/2024_sentiment_synthetic.csv.\n"
-        "\nThis backtest also does NOT exercise the issue-accountability term "
-        "(issue_gamma) — there's no 2024 per-issue sentiment dataset yet. "
-        "That pathway stays at its inert default (gamma=0.0) here regardless "
-        "of what's configured in settings.yaml. Build a 2024 issue-sentiment "
-        "fixture before trusting any non-zero issue_incumbency_gamma_prior."
+        "\nThis backtest's PASS/FAIL gate above still runs with issue_gamma=0.0 "
+        "(inert) — see run_issue_gamma_sweep() below for exploratory, non-gating "
+        "output on the issue-accountability term against the synthetic "
+        "2024_issue_sentiment_synthetic.csv fixture."
     )
     return all_within_tolerance
 
@@ -126,4 +196,6 @@ def run_backtest() -> bool:
 if __name__ == "__main__":
     import sys
 
-    sys.exit(0 if run_backtest() else 1)
+    passed = run_backtest()
+    run_issue_gamma_sweep()
+    sys.exit(0 if passed else 1)

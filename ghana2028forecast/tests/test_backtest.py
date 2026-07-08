@@ -101,3 +101,15 @@ def test_backtest_2024_within_tolerance():
     import backtest_2024
 
     assert backtest_2024.run_backtest() is True
+
+
+def test_issue_gamma_sweep_runs_without_error():
+    """The gamma sweep is exploratory, not a pass/fail gate (see module
+    docstring) — this only confirms it loads the fixture and runs end to
+    end, not that any particular gamma value is correct."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "forecasting"))
+    import backtest_2024
+
+    issues = backtest_2024.load_issue_sentiment()
+    assert len(issues) > 0
+    backtest_2024.run_issue_gamma_sweep()  # should not raise

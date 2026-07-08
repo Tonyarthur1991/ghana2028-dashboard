@@ -32,6 +32,13 @@ export interface ForecastSnapshot {
   pollBlendInput: number;
   sentimentDeltaInput: number;
   betaUsed: number;
+  /** Incumbency-weighted issue-accountability adjustment — see
+   * ghana2028forecast/forecasting/transfer_function.py module docstring.
+   * Defaults to 0 (inert) until issueGammaUsed is backtested and set
+   * non-zero in settings.yaml; both fields are always present so the UI can
+   * show "not yet active" rather than silently omitting the term. */
+  issueAdjustmentInput: number;
+  issueGammaUsed: number;
   nPollsUsed: number;
   nMentionsUsed: number;
   wasPublished: boolean;

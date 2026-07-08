@@ -1,0 +1,21 @@
+# SYNTHETIC PLACEHOLDER DATA — not real scraped sentiment, see
+# 2024_sentiment_synthetic.csv header for why. Directionally shaped to match
+# well-documented 2024 conditions (cedi depreciation, IMF programme
+# austerity, galamsey/procurement scandals) but the actual sentiment/volume
+# numbers are invented for mechanism testing, not measured.
+#
+# NPP was the incumbent through the Dec 2024 election — NDC only took office
+# after winning it. Pass incumbent_party_code="NPP" for this backtest, NOT
+# the current settings.yaml default (which reflects the 2026 config, after
+# the handover).
+day,issue_code,net_sentiment,mention_volume
+2024-10-01,economy,-0.20,5000
+2024-10-15,economy,-0.28,5600
+2024-11-01,economy,-0.35,6200
+2024-11-15,economy,-0.42,6800
+2024-11-25,economy,-0.48,7400
+2024-10-01,corruption,-0.15,3000
+2024-10-15,corruption,-0.20,3300
+2024-11-01,corruption,-0.25,3600
+2024-11-15,corruption,-0.30,3900
+2024-11-25,corruption,-0.33,4200

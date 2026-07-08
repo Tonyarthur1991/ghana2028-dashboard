@@ -53,7 +53,12 @@ function buildForecastSection() {
   const nppDelta = +(npp.pointEstimatePct - nppPrev.pointEstimatePct).toFixed(1);
   const overlap = Math.max(0, Math.min(ndc.ciUpperPct, npp.ciUpperPct) - Math.max(ndc.ciLowerPct, npp.ciLowerPct));
 
-  const text = `NDC sits at ${fmt1(ndc.pointEstimatePct)}% (95% CI: ${fmt1(ndc.ciLowerPct)}–${fmt1(ndc.ciUpperPct)}%), ${ndcDelta >= 0 ? "up" : "down"} ${Math.abs(ndcDelta)} points from last month's ${fmt1(ndcPrev.pointEstimatePct)}%. NPP sits at ${fmt1(npp.pointEstimatePct)}% (95% CI: ${fmt1(npp.ciLowerPct)}–${fmt1(npp.ciUpperPct)}%), ${nppDelta >= 0 ? "up" : "down"} ${Math.abs(nppDelta)} points from last month's ${fmt1(nppPrev.pointEstimatePct)}%. The two intervals ${overlap > 0 ? `overlap by ${fmt1(overlap)} points at the tail` : "do not overlap"}. A move this size is noise against a credible interval this wide: read the point estimates as a snapshot, not a trend confirmation.`;
+  const gammaActive = ndc.issueGammaUsed !== 0 || npp.issueGammaUsed !== 0;
+  const issueSentence = gammaActive
+    ? ` The incumbency-weighted issue-accountability term is active this run: it moved NDC by ${fmt2(ndc.issueGammaUsed * ndc.issueAdjustmentInput)} points and NPP by ${fmt2(npp.issueGammaUsed * npp.issueAdjustmentInput)} points.`
+    : " The incumbency-weighted issue-accountability term is tracked but inactive this run (gamma = 0, not yet backtested — see ghana2028forecast/forecasting/transfer_function.py).";
+
+  const text = `NDC sits at ${fmt1(ndc.pointEstimatePct)}% (95% CI: ${fmt1(ndc.ciLowerPct)}–${fmt1(ndc.ciUpperPct)}%), ${ndcDelta >= 0 ? "up" : "down"} ${Math.abs(ndcDelta)} points from last month's ${fmt1(ndcPrev.pointEstimatePct)}%. NPP sits at ${fmt1(npp.pointEstimatePct)}% (95% CI: ${fmt1(npp.ciLowerPct)}–${fmt1(npp.ciUpperPct)}%), ${nppDelta >= 0 ? "up" : "down"} ${Math.abs(nppDelta)} points from last month's ${fmt1(nppPrev.pointEstimatePct)}%. The two intervals ${overlap > 0 ? `overlap by ${fmt1(overlap)} points at the tail` : "do not overlap"}. A move this size is noise against a credible interval this wide: read the point estimates as a snapshot, not a trend confirmation.${issueSentence}`;
 
   return { ndc, npp, ndcDelta, nppDelta, text };
 }

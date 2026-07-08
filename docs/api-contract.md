@@ -23,6 +23,8 @@ Latest forecast per party, from the `forecast_runs` table (most recent `run_date
     "pollBlendInput": 52.2,
     "sentimentDeltaInput": 1.43,
     "betaUsed": 0.35,
+    "issueAdjustmentInput": 0.0,
+    "issueGammaUsed": 0.0,
     "nPollsUsed": 3,
     "nMentionsUsed": 340000,
     "wasPublished": true,
@@ -36,6 +38,8 @@ Latest forecast per party, from the `forecast_runs` table (most recent `run_date
 Full forecast run history (query params optional — omit `party` for all parties). Backs `ForecastTrendChart`. `party` filters to one `PartyCode`; `months` defaults to 24 server-side.
 
 Same row shape as `/forecast/latest`, returned as an array covering every run in the window, not just the latest.
+
+**`issueAdjustmentInput` / `issueGammaUsed`**: the incumbency-weighted issue-accountability term from `ghana2028forecast/forecasting/transfer_function.py` (`issue_accountability_adjustment()`). Both fields are always present, even when the term is inert (`issueGammaUsed: 0.0`, the default until backtested) — never omit them, so the UI can render "not yet active" explicitly rather than silently dropping the term. See that module's docstring before setting `issueGammaUsed` non-zero in production: it's a modelling assumption, not a measured quantity, and needs its own backtest (`data/backtest/2024_issue_sentiment_synthetic.csv` is a mechanism-test fixture only, not calibration evidence).
 
 ## `GET /api/sentiment/daily?entity_code={code}&days={n}`
 
