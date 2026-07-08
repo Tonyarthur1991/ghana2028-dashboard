@@ -70,7 +70,27 @@ npm run build         # production build
 - **Adding a new chart:** copy the pattern in any existing `src/components/charts/*.tsx` — a query hook from `src/lib/hooks`, a `LastUpdated`, an `ExportCsvButton`, and (if it shows a forecast number) a credible interval, never a bare point estimate. That four-part pattern is the house style; don't add a chart that skips any of the four.
 - **Adding a new party** (e.g. a genuine third-force breakthrough): add it to `PARTY_META` in `src/lib/colors.ts` with a neutral (non-brand) colour, and to `MAJOR_PARTIES` in the same file if it should appear on the headline summary cards and trend chart by default.
 
-## 5. Accessibility notes
+## 6. Monthly email report
+
+`scripts/generate-report.mjs` builds an HTML report (forecast trend, sentiment, top issues, regional breakdown, latest poll — each with a chart and a plain-language explanation) from the same `src/data/*.json` files the dashboard reads, and emails it via Gmail SMTP. `.github/workflows/monthly-report.yml` runs it automatically at 08:00 UTC on the 1st of every month.
+
+**One-time setup** — add these repository secrets under GitHub → Settings → Secrets and variables → Actions:
+
+- `GMAIL_USER` — the Gmail address to send from.
+- `GMAIL_APP_PASSWORD` — an [app password](https://myaccount.google.com/apppasswords) for that account (not your normal password; requires 2-Step Verification to be enabled first).
+- `REPORT_RECIPIENT` — optional, defaults to `GMAIL_USER` if unset.
+
+Once those three secrets exist, the workflow sends itself every month with no further action needed. Trigger a run early via the Actions tab (**Monthly report → Run workflow**) to confirm it works before waiting for the 1st.
+
+**Local testing:**
+```bash
+npm run report:dry-run   # writes report.html + chart PNGs to disk, no credentials needed, no email sent
+npm run report            # sends for real — needs GMAIL_USER / GMAIL_APP_PASSWORD env vars set locally
+```
+
+The report narrative is computed from the data on each run (month-over-month deltas, CI overlap, top issues by volume, etc.) — editing `src/data/*.json` changes next month's report the same way it changes the live dashboard.
+
+## 7. Accessibility notes
 
 - Colour is never the only signal: regional confidence and issue trend direction both pair colour/opacity with visible text (`CONFIDENCE_LABEL`, trend arrows), satisfying WCAG 1.4.1.
 - `MethodologyModal` uses the native `<dialog>` element specifically for its built-in focus trap and `Escape`-to-close — see the component's top comment.
