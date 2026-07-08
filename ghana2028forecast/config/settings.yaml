@@ -1,0 +1,83 @@
+# Model and pipeline settings. Keep numeric assumptions here, not hardcoded
+# in source, so back-tests and production runs can diff their configs.
+
+forecasting:
+  sentiment_recency_half_life_days: 14
+  poll_recency_half_life_days: 30
+  # beta: weight applied to standardised month-on-month sentiment change in
+  # the transfer function. Deliberately conservative — sentiment nudges the
+  # trend, it does not set the level. Re-estimate via backtest_2024.py before
+  # trusting any non-zero value in production.
+  sentiment_beta_prior: 0.35
+  sentiment_beta_prior_std: 0.15
+  credible_interval: 0.95
+  min_poll_sources_for_full_confidence: 3
+  # Incumbency-weighted issue-accountability term — see transfer_function.py
+  # module docstring for the full reasoning. Defaulted OFF (gamma prior 0.0)
+  # because nothing in the ingestion pipeline yet measures sentiment about a
+  # party's HANDLING of an issue, only issue sentiment and party sentiment
+  # independently. Do not set the gamma prior non-zero until a backtest
+  # (mirroring backtest_2024.py) validates it against a real outcome —
+  # 2024's backtest has no per-issue sentiment data, so it cannot exercise
+  # this pathway at all.
+  incumbent_party_code: "NDC"  # update after every election per gazetteer.yaml
+  issue_incumbency_gamma_prior: 0.0
+  issue_incumbency_gamma_prior_std: 0.1
+  # Issues voters plausibly hold the sitting government accountable for —
+  # deliberately excludes issues with no clear incumbent ownership (e.g.
+  # mining_environment enforcement is contested across administrations).
+  # Re-review this list each term; "accountable" issues can shift.
+  accountable_issue_codes: ["economy", "corruption", "energy", "employment", "health", "fuel"]
+  # Fraction of anti-incumbent issue sentiment assumed to convert into
+  # opposition support rather than undecided/non-voting. Conservative by
+  # design — same "nudge, don't set the level" philosophy as sentiment_beta.
+  opposition_transfer_fraction: 0.4
+  issue_model_uncertainty_pct: 0.0  # bump alongside gamma once backtested
+  pollster_house_weights:
+    # Weight multiplier per pollster, 1.0 = neutral. Update after each cycle
+    # based on documented accuracy vs certified EC results.
+    "Global InfoAnalytics": 1.1
+    "Afrobarometer": 1.15
+    "CDD-Ghana": 1.1
+    "IEA": 1.0
+    "party-aligned-unverified": 0.4
+
+ingestion:
+  x_stream_poll_interval_seconds: 300
+  news_scrape_interval_hours: 4
+  forum_scrape_interval_hours: 24
+  rolling_window_days: 90
+  bot_filter:
+    min_account_age_days: 30
+    max_posts_per_day_before_flag: 50
+  dedup:
+    simhash_hamming_threshold: 3
+
+sentiment_model:
+  base_checkpoint: "Ghana-NLP/twi-bert-base-uncased"   # verify current name before use
+  fine_tune_dataset: "AsanteTwiSenti"
+  confidence_floor: 0.55   # below this, sentiment score excluded from aggregate
+
+publishing:
+  monthly_release_day_of_month: 1
+  intensification_start_date: "2028-10-01"   # switch to bi-weekly
+  intensification_interval_days: 14
+  election_silence_hours_before_poll: 24
+  platforms: ["facebook", "x", "instagram"]
+
+content:
+  brand:
+    hashtag_primary: "#GH2028Watch"
+    hashtags_standing: ["#GhanaDecides", "#GH2028"]
+  chart_dimensions:
+    instagram: [1080, 1080]
+    x: [1600, 900]
+    facebook: [1600, 900]
+  disclaimer_line: "Model-based estimate, not a guarantee. Not affiliated with any party or campaign. Full methodology: [link]"
+
+review_gates:
+  # Phase-dependent automation level. Phase 1-3: true = human must approve
+  # before anything is published. Flip to false only in Phase 3+ per roadmap,
+  # and even then keep the anomaly kill-switch below active.
+  require_human_approval: true
+  anomaly_swing_threshold_points: 5.0   # month-on-month swing beyond this halts auto-publish

@@ -1,0 +1,160 @@
+# Political gazetteer — source of truth for entity recognition and filtering.
+# Update `candidates.ndc` once the NDC 2028 primary concludes (not yet held as of
+# July 2026; Mahama is constitutionally term-limited out after his second term).
+# NPP candidate is settled: Bawumia won the NPP primary 31 Jan 2026 (56.48% of
+# delegate votes) — https://www.myjoyonline.com/npp-to-elect-2028-flagbearer-on-january-31-2026/
+
+election:
+  date: "2028-12-07"
+  type: "general"  # presidential + 276 parliamentary seats
+
+parties:
+  - code: NDC
+    full_name: "National Democratic Congress"
+    aliases: ["NDC", "Nkoaa Nkoaa Party", "the Umbrella"]
+    colour_hex: "#5B9BD5"   # neutral palette colour for charts — NOT party red
+  - code: NPP
+    full_name: "New Patriotic Party"
+    aliases: ["NPP", "the Elephant"]
+    colour_hex: "#ED7D31"   # neutral palette colour for charts — NOT party blue
+  - code: CPP
+    full_name: "Convention People's Party"
+    aliases: ["CPP"]
+    colour_hex: "#A5A5A5"
+  - code: GUM
+    full_name: "Ghana Union Movement"
+    aliases: ["GUM"]
+    colour_hex: "#A5A5A5"
+  - code: PNC
+    full_name: "People's National Convention"
+    aliases: ["PNC"]
+    colour_hex: "#A5A5A5"
+  - code: LPG
+    full_name: "Liberal Party of Ghana"
+    aliases: ["LPG"]
+    colour_hex: "#A5A5A5"
+  - code: APC
+    full_name: "All People's Congress"
+    aliases: ["APC"]
+    colour_hex: "#A5A5A5"
+  - code: PPP
+    full_name: "Progressive People's Party"
+    aliases: ["PPP"]
+    colour_hex: "#A5A5A5"
+
+candidates:
+  npp:
+    - name: "Mahamudu Bawumia"
+      aliases: ["Bawumia", "MB", "Dr Bawumia"]
+      status: "confirmed_flagbearer"
+      confirmed_date: "2026-01-31"
+      source: "https://www.myjoyonline.com/npp-to-elect-2028-flagbearer-on-january-31-2026/"
+  ndc:
+    # PLACEHOLDER — no primary held yet. These are declared/frequently-cited
+    # contenders as of mid-2026 reporting. Re-verify and replace once the NDC
+    # primary concludes.
+    - name: "Jane Naana Opoku-Agyemang"
+      aliases: ["Naana Opoku-Agyemang", "JNOA"]
+      status: "speculative"
+    - name: "Haruna Iddrisu"
+      aliases: ["Haruna Iddrisu"]
+      status: "speculative"
+    - name: "Johnson Asiedu Nketiah"
+      aliases: ["Asiedu Nketiah", "General Mosquito"]
+      status: "speculative"
+    - name: "Julius Debrah"
+      aliases: ["Julius Debrah"]
+      status: "speculative"
+    - name: "Cassiel Ato Forson"
+      aliases: ["Ato Forson"]
+      status: "speculative"
+
+regions:
+  # All 16 administrative regions of Ghana (post-2018 split) — used for
+  # geo-inference from user-declared location and geotagged posts.
+  - "Greater Accra"
+  - "Ashanti"
+  - "Western"
+  - "Western North"
+  - "Central"
+  - "Eastern"
+  - "Volta"
+  - "Oti"
+  - "Northern"
+  - "Savannah"
+  - "North East"
+  - "Upper East"
+  - "Upper West"
+  - "Bono"
+  - "Bono East"
+  - "Ahafo"
+
+issues:
+  # Keyword seeds per tracked issue — extend as discourse evolves.
+  economy:
+    - "cedi"
+    - "inflation"
+    - "cost of living"
+    - "exchange rate"
+    - "IMF"
+    - "debt restructuring"
+  energy:
+    - "dumsor"
+    - "load shedding"
+    - "power outage"
+    - "ECG"
+  mining_environment:
+    - "galamsey"
+    - "illegal mining"
+    - "river pollution"
+  employment:
+    - "unemployment"
+    - "jobs"
+    - "graduate unemployment"
+    - "youth employment"
+  health:
+    - "NHIS"
+    - "healthcare"
+    - "hospital"
+  fuel:
+    - "fuel prices"
+    - "petrol price"
+    - "diesel price"
+  taxation:
+    - "e-levy"
+    - "levy"
+    - "tax"
+  corruption:
+    - "corruption"
+    - "galamsey money"
+    - "procurement"
+
+languages:
+  # Used to seed language-ID model and route to appropriate sentiment model.
+  - code: "en"
+    name: "English"
+  - code: "tw"
+    name: "Twi (Akuapem/Asante)"
+  - code: "gaa"
+    name: "Ga"
+  - code: "ewe"
+    name: "Ewe"
+  - code: "dag"
+    name: "Dagbani"
+  - code: "pcm-gh"
+    name: "Ghanaian Pidgin English"
+
+news_sources:
+  - name: "GhanaWeb"
+    rss: "https://www.ghanaweb.com/GhanaHomePage/rss/politics.xml"
+  - name: "MyJoyOnline"
+    rss: "https://www.myjoyonline.com/feed/"
+  - name: "Citi Newsroom"
+    rss: "https://citinewsroom.com/feed/"
+  - name: "Graphic Online"
+    rss: "https://www.graphic.com.gh/rss.xml"
+  - name: "Modern Ghana"
+    rss: "https://www.modernghana.com/rss/politics.xml"
+
+# Sanity note: verify each RSS URL before first run — outlets change feed
+# paths without notice. Treat 404s as a monitoring alert, not a silent skip.

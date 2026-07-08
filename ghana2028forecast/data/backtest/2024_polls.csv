@@ -1,0 +1,3 @@
+pollster,fieldwork_start,fieldwork_end,published_date,sample_size,party_code,vote_share_pct,margin_of_error_pct,source_url,note
+Global InfoAnalytics,2024-11-20,2024-11-28,2024-12-02,2400,NDC,52.2,2.0,https://www.example.com/gia-2024-poll,"Approximate dates reconstructed from press coverage; verify against original release before treating as ground truth"
+Global InfoAnalytics,2024-11-20,2024-11-28,2024-12-02,2400,NPP,41.4,2.0,https://www.example.com/gia-2024-poll,"Approximate dates reconstructed from press coverage; verify against original release before treating as ground truth"

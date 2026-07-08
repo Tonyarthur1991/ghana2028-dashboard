@@ -1,0 +1,19 @@
+# SYNTHETIC PLACEHOLDER DATA — not real scraped sentiment.
+# No archived Ghanaian social sentiment dataset for the Oct-Dec 2024 window
+# was available at scaffold time (X academic archive access and Meta Content
+# Library access are still pending per README next-actions). This file exists
+# so backtest_2024.py is runnable end-to-end as a mechanism test today; it
+# does NOT validate the model's real-world accuracy. Replace with genuine
+# archived data before treating any backtest_2024.py output as calibration
+# evidence, and say so explicitly in any published methodology page.
+day,party_code,weighted_mean_sentiment
+2024-10-01,NDC,0.05
+2024-10-15,NDC,0.08
+2024-11-01,NDC,0.12
+2024-11-15,NDC,0.18
+2024-11-25,NDC,0.22
+2024-10-01,NPP,-0.02
+2024-10-15,NPP,-0.05
+2024-11-01,NPP,-0.10
+2024-11-15,NPP,-0.14
+2024-11-25,NPP,-0.16
